@@ -1,0 +1,26 @@
+:root {
+  --header-height: 8vh;
+  --footer-height: 6vh;
+  --main-height: calc(100vh - var(--header-height) - var(--footer-height));
+}
+
+#root {
+  height: 100vh;
+  text-align: center;
+}
+
+header {
+  border: 5px solid red;
+  height: var(--header-height);
+}
+
+main {
+  border: 5px solid blue;
+  height: var(--main-height);
+  overflow-y: auto; /* Enables scrolling for main content */
+}
+
+footer {
+  border: 5px solid green;
+  height: var(--footer-height);
+}

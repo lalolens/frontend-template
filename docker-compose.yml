@@ -1,0 +1,23 @@
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfiles/Development.Dockerfile
+    image: fe-development
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/app
+    environment:
+      - NODE_ENV=development
+  production:
+    build:
+      context: .
+      dockerfile: Dockerfiles/Production.Dockerfile
+    image: fe-production
+    ports:
+      - "3003:80"
+    volumes:
+      - .:/app
+    environment:
+      - NODE_ENV=production
