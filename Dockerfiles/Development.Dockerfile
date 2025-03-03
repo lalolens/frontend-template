@@ -9,8 +9,7 @@ RUN apk add --no-cache make
 COPY . .
 
 # Install dependencies using your Makefile target (runs "npm install")
-# RUN make install
-RUN npm install
+RUN make install
 
 # Expose the port your dev server runs on (6173)
 EXPOSE 5173
