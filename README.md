@@ -1,7 +1,3 @@
-Below is an updated version of your README/Template file with some corrections and improvements:
-
----
-
 # Frontend Template for Websites
 
 ## Project Details
@@ -29,5 +25,3 @@ The project includes a Docker folder with Dockerfiles, a docker-compose file, an
 You can either use the Makefile to run the project locally or to deploy it within a Docker container. The Makefile simplifies project management and deployment significantly.
 
 Please update these files to meet your needs. I have incorporated basic configurations and scripts to help you get started.
-
----
