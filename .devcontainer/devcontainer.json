@@ -1,19 +1,26 @@
 {
   "name": "Vite TS React Dev Container",
   "build": {
-    "dockerfile": "../Dockerfiles/Development.Dockerfile",
+    "dockerfile": "./Dockerfile",
     "context": ".."
   },
   "workspaceFolder": "/app",
-  "settings": {
-    "terminal.integrated.shell.linux": "/bin/bash"
-  },
-  "extensions": [
-    "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode",
-    "ms-vscode.vscode-typescript-next"
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/app,type=bind,consistency=cached"
   ],
-  "postCreateCommand": "npm install",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+      },
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "ms-vscode.vscode-typescript-next"
+      ]
+    }
+  },
+  "postCreateCommand": "make install",
   "forwardPorts": [5173],
   "remoteUser": "node"
 }

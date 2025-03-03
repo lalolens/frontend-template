@@ -1,4 +1,4 @@
-FROM node:18-alpine
+FROM node:20-alpine
 
 WORKDIR /app
 
@@ -7,6 +7,9 @@ RUN apk add --no-cache make
 
 # Copy the rest of your source code
 COPY . .
+
+RUN chown -R node:node /app
+USER node
 
 # Install dependencies using your Makefile target (runs "npm install")
 RUN make install

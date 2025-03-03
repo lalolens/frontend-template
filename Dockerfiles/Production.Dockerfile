@@ -1,5 +1,5 @@
 # Stage 1: Build the project using Node.js
-FROM node:18-alpine AS builder
+FROM node:20-alpine AS builder
 WORKDIR /app
 
 # Install build tools including make (and optionally build-base if needed)
